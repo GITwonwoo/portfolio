@@ -50,7 +50,7 @@
 
 #section1 {
   background: radial-gradient(220% 105% at top center, #1B2947 10%, #895e92 30%, #e485a0 45%, hsl(61, 80%, 84%));
-  height: 2000px;
+  height: 1000px;
   // background-attachment:fixed; 
   // overflow:hidden;
   .titlebox {
@@ -67,12 +67,7 @@
     opacity: 0;
     transition: all 2s;
   }
-  #aboutme{
-    color: white;
-    font-family: "Corben", serif;
-    text-align: center;
-    height: 1000px;
-  }
+ 
 }
 
 
