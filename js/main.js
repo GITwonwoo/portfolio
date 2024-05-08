@@ -29,7 +29,7 @@ $(function(){
 
     $(window).scroll(function(){
         let ws=$(this).scrollTop();
-        let about= $('#aboutme').offset().top;
+        let slider= $('#slider').offset().top;
         // console.log(ws)
 
         if(ws>0 && ws<=400){     
@@ -39,13 +39,56 @@ $(function(){
             $('#section1 .titlebox').css("transform","translateX(-400px)").css("opacity", "0");
         }
 
-        if(ws>about-50){
+        if(ws>slider-50){
             $(".stickybox").fadeIn("slow");
         }else{
             $(".stickybox").fadeOut();
         }
     });
 });
+
+// // section1 title about me
+// $(function(){
+//     $('#aboutme').css("transform","translateX(0px)").css("opacity", "1");
+
+//     if(ws>0 && ws<=400){     
+//         $('#aboutme').css("transform","translateX(0px)").css("opacity", "1");                  
+//     }
+//     if(ws>400){
+//         $('#section1 .titlebox').css("transform","translateX(-400px)").css("opacity", "0");
+//     }
+
+//     if(ws>slider-50){
+//         $(".stickybox").fadeIn("slow");
+//     }else{
+//         $(".stickybox").fadeOut();
+//     }
+// });
+// sticky side menu scroll
+$(function(){
+    $(window).scroll(function(){
+        let ws=$(this).scrollTop();
+        let aboutmenu= $('#aboutme').offset().top;
+        let project= $('#project').offset().top;
+        let contact=$('#contact').offset().top;
+
+
+        if(ws>=aboutmenu && ws < project){    
+            $('.stickybox li a').removeClass('active'); 
+            $('.aboutmenu').addClass('active');                 
+        }
+        else if(ws>=project && ws < contact){
+            $('.stickybox li a').removeClass('active'); 
+            $('.projectmenu').addClass('active');
+        }
+        else if(ws>=contact && ws < contact){
+            $('.stickybox li a').removeClass('active'); 
+            $('.contactmenu').addClass('active');
+        }
+    });
+});
+
+
 
 // 스크롤이벤트
 const scrollSection = document.querySelector('.horizontal-scroll__section');

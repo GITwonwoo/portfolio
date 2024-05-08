@@ -8,16 +8,16 @@
     height: 3650px;
     background: radial-gradient(220% 105% at top center, #f7eeb3, #f7eeb3);
   }
-.section3{
+.blackBG{
+    height: 5330px;
     background-color: black;
 }
-  
+
   // tab menu
   .stickybox{
     position: fixed;
-    left: 50px;
+    left: 90px;
     top: 30%;
-    height: 500px;
     width: 100px;
     float: left;
   
@@ -27,7 +27,7 @@
       padding: 0;
       margin-left: auto; 
       margin-right: auto;
-      background-color: white;
+      background-color: black;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -56,7 +56,7 @@
       height: 3rem;
       border-radius: 8px;
       position: relative;
-      &:hover, &:focus {
+      &:hover, &:focus, &.active {
         background-color: #e485a0;      
         outline: 0;
         
@@ -103,8 +103,8 @@
     }
   }
 
-  #aboutme{
-    width: calc(100% - 100px);
+  #slider{
+    width: calc(100% - 200px);
     height: 1000px;
     float: right;
     padding-left: 100px;
@@ -171,13 +171,14 @@
     text-align: center;
   }
   .hero__top h1 {
-    color: #090e1f;
+    color: white;
     font-size: 80px;
     line-height: 1.1;
     margin-bottom: 32px;
     max-width: 600px;
     z-index: 3;
     position: relative;
+    font-family: "Corben", serif;
   }
   @media (max-width: 960px) {
     .hero__top h1 {
@@ -218,11 +219,15 @@
   .about__item:nth-child(even) {
     flex-direction: column-reverse;
   }
-  .about__item img {
-    object-fit: cover;
+  .imgbox {
+    overflow: hidden;
     height: 500px;
     width: 500px;
   }
+  .imgbox:hover{
+    cursor: pointer;
+  }
+
   .about__item .content {
     height: 50%;
     max-width: 500px;
@@ -262,6 +267,23 @@
   }
   
   .extra-section {
-    height: 200vh;
+    margin: 120px 0px 0px 310px;
+    font-size: 100px;
+    height: 50vh;
+    font-family: "Corben", serif;
     background-color: #020407;
+    color: white;
   }
+
+  .button{
+    background-color:  #ebe09a; color: white;  border-radius: 10px; width: 100px; height: 50px;
+    border-color: rgb(222, 224, 210); 
+  }
+  .button:hover{
+    cursor: pointer;
+  }
+  .content .ai-devices{
+    
+    width: 20px;
+  }
+
