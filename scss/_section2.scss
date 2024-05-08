@@ -1,0 +1,118 @@
+//section2
+.section2 {
+    height: 3000px;
+    background: radial-gradient(220% 105% at top center, #f7eeb3, #f7eeb3);
+  
+  }
+  
+  // tab menu
+  .stickybox{
+    position: fixed;
+    left: 50px;
+    top: 30%;
+    height: 500px;
+    width: 100px;
+    float: left;
+  
+    ul { 
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      margin-left: auto; 
+      margin-right: auto;
+      background-color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 10px 50px 0 rgba(#e485a0, .25);
+    }
+    
+    // li:nth-child(6) {
+    //   margin-top: 5rem; 
+    //   padding-top: 1.25rem;
+    //   border-top: 1px solid #e485a0;
+    // }
+    
+    li + li {
+      margin-top: 0.75rem;
+    }
+    
+    a {
+      color: #e485a0; 
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 3rem;
+      height: 3rem;
+      border-radius: 8px;
+      position: relative;
+      &:hover, &:focus {
+        background-color: #e485a0;      
+        outline: 0;
+        
+        span { 
+          transform: scale(1);
+          opacity: 1;
+        }
+  
+        i{
+          color: white;
+        }
+      }
+      
+      i {
+        font-size: 1.375rem;
+      }
+      
+      span {
+        position: absolute;
+        background-color: white;
+        white-space: nowrap;
+        padding: .5rem 1rem;
+        border-radius: 6px;
+        left: calc(100% + 1.5rem);
+        transform-origin: center left;
+        transform: scale(0);
+        opacity: 0;
+        transition: .15s ease;
+        &:before {
+          content: "";
+          // display: block;
+          width: 12px;
+          height: 12px;
+          position: absolute;
+          background-color: #e485a0;
+          left: -5px;
+          top: 50%;
+          transform: translatey(-50%) rotate(45deg);
+          border-radius: 3px;
+        }
+      }
+      
+    
+    }
+  }
+  #project{
+    width: calc(100% - 200px);
+    height: 1000px;
+    float: right;
+    padding-left: 100px;
+  }
+  #study{
+   
+    width: calc(100% - 200px);
+    height: 1000px;
+    float: right;
+    padding-left: 100px;
+  }
+  #profile{
+    width: calc(100% - 200px);
+    
+    height: 1000px;
+    float: right;
+    padding-left: 100px;
+  }
+  

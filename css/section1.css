@@ -1,0 +1,167 @@
+@import url("https://fonts.googleapis.com/css2?family=Corben:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap");
+.section2 {
+  height: 3000px;
+  background: radial-gradient(220% 105% at top center, #f7eeb3, #f7eeb3);
+}
+
+.stickybox {
+  position: fixed;
+  left: 50px;
+  top: 30%;
+  height: 500px;
+  width: 100px;
+  float: left;
+}
+.stickybox ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 10px 50px 0 rgba(228, 133, 160, 0.25);
+}
+.stickybox li + li {
+  margin-top: 0.75rem;
+}
+.stickybox a {
+  color: #e485a0;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 8px;
+  position: relative;
+}
+.stickybox a:hover, .stickybox a:focus {
+  background-color: #e485a0;
+  outline: 0;
+}
+.stickybox a:hover span, .stickybox a:focus span {
+  transform: scale(1);
+  opacity: 1;
+}
+.stickybox a:hover i, .stickybox a:focus i {
+  color: white;
+}
+.stickybox a i {
+  font-size: 1.375rem;
+}
+.stickybox a span {
+  position: absolute;
+  background-color: white;
+  white-space: nowrap;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  left: calc(100% + 1.5rem);
+  transform-origin: center left;
+  transform: scale(0);
+  opacity: 0;
+  transition: 0.15s ease;
+}
+.stickybox a span:before {
+  content: "";
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  background-color: #e485a0;
+  left: -5px;
+  top: 50%;
+  transform: translatey(-50%) rotate(45deg);
+  border-radius: 3px;
+}
+
+#project {
+  width: calc(100% - 200px);
+  height: 1000px;
+  float: right;
+  padding-left: 100px;
+}
+
+#study {
+  width: calc(100% - 200px);
+  height: 1000px;
+  float: right;
+  padding-left: 100px;
+}
+
+#profile {
+  width: calc(100% - 200px);
+  height: 1000px;
+  float: right;
+  padding-left: 100px;
+}
+
+*, *:after, *:before {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@keyframes rotate {
+  0% {
+    transform: perspective(400px) rotateZ(20deg) rotateX(-40deg) rotateY(0);
+  }
+  100% {
+    transform: perspective(400px) rotateZ(20deg) rotateX(-40deg) rotateY(-360deg);
+  }
+}
+.stars {
+  transform: perspective(500px);
+  transform-style: preserve-3d;
+  position: fixed;
+  bottom: 0;
+  perspective-origin: 50% 100%;
+  left: 50%;
+  animation: rotate 90s infinite linear;
+}
+
+.star {
+  width: 2px;
+  height: 2px;
+  background: #F7F7B6;
+  /* border-radius:100%; */
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform-origin: 0 0 -300px;
+  transform: translate3d(0, 0, -300px);
+  backface-visibility: hidden;
+}
+
+#section1 {
+  background: radial-gradient(220% 105% at top center, #1B2947 10%, #895e92 30%, #e485a0 45%, hsl(61, 80%, 84%));
+  height: 2000px;
+}
+#section1 .titlebox {
+  padding-top: 300px;
+  height: 1000px;
+}
+#section1 .titlebox {
+  color: white;
+  font-family: "Corben", serif;
+  text-align: center;
+  font-size: 100px;
+  font-weight: 700;
+  transform: translateX(-300px);
+  opacity: 0;
+  transition: all 2s;
+}
+#section1 #aboutme {
+  color: white;
+  font-family: "Corben", serif;
+  text-align: center;
+  height: 1000px;
+}
