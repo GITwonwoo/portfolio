@@ -16,9 +16,8 @@
   // tab menu
   .stickybox{
     position: fixed;
-    left: 90px;
+    left: 60px;
     top: 30%;
-    width: 100px;
     float: left;
   
     ul { 
@@ -31,7 +30,7 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      padding: 1.5rem;
+      padding: 4rem;
       border-radius: 10px;
       box-shadow: 0 10px 50px 0 rgba(#e485a0, .25);
     }
@@ -105,7 +104,6 @@
 
   #slider{
     width: calc(100% - 200px);
-    height: 1000px;
     float: right;
     padding-left: 100px;
   }
@@ -145,7 +143,7 @@
     overflow-x: hidden;
   }
   
-  body {
+  .section2 {
     font-family: "Neuzeit", sans-serif;
     font-size: 18px;
     line-height: 1.5;
@@ -212,6 +210,7 @@
     padding: 0px 40px;
     display: flex;
     flex-direction: column;
+    padding-right: 160px;
   }
   .about__item:nth-child(odd) img {
     margin-bottom: 64px;
@@ -220,6 +219,8 @@
     flex-direction: column-reverse;
   }
   .imgbox {
+    border: 10px solid black;
+    border-radius: 3%;
     overflow: hidden;
     height: 500px;
     width: 500px;
@@ -227,6 +228,8 @@
   .imgbox:hover{
     cursor: pointer;
   }
+
+
 
   .about__item .content {
     height: 50%;
@@ -266,14 +269,7 @@
     will-change: transform;
   }
   
-  .extra-section {
-    margin: 120px 0px 0px 310px;
-    font-size: 100px;
-    height: 50vh;
-    font-family: "Corben", serif;
-    background-color: #020407;
-    color: white;
-  }
+  
 
   .button{
     background-color:  #ebe09a; color: white;  border-radius: 10px; width: 100px; height: 50px;
@@ -282,8 +278,66 @@
   .button:hover{
     cursor: pointer;
   }
-  .content .ai-devices{
-    
-    width: 20px;
+
+  .about__item img{
+    transition: 3s;
   }
 
+
+  .iconflex{
+    display: flex;
+  }
+  .icon{background-color: gray; color: white; 
+    border-radius: 7px;
+    padding: 2px; margin-right: 2px;
+  }
+  //.content
+  .content{
+    display: flex;
+    justify-content: space-around;
+  }
+  .mobile{
+    background-image: url(../img/mobile.png);
+    width: 115px; height:230px;
+    background-size: cover;
+    overflow: hidden;
+    img:po
+  }
+ .mobile img{
+  
+ }
+  //버튼 i폰트 사이즈
+  .content i{
+    font-size: 250%;
+  }
+  //화면 트렌지션
+  #project_1:hover{
+    transform: translateY(-1000px);
+  }
+  #project_2:hover{
+    transform: translateY(-685px);
+  }
+  #project_3:hover{
+    transform: translateY(-847px);
+  }
+  #project_4:hover{
+    transform: translateY(-470px);
+  }
+  #project_5:hover{
+    transform: translateY(-641px);
+  }
+
+ 
+
+
+
+
+  //last section
+  .extra-section {
+    margin: 120px 0px 0px 310px;
+    font-size: 100px;
+    height: 50vh;
+    font-family: "Corben", serif;
+    background-color: #020407;
+    color: white;
+  }

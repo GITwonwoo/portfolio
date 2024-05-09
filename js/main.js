@@ -47,45 +47,28 @@ $(function(){
     });
 });
 
-// // section1 title about me
-// $(function(){
-//     $('#aboutme').css("transform","translateX(0px)").css("opacity", "1");
-
-//     if(ws>0 && ws<=400){     
-//         $('#aboutme').css("transform","translateX(0px)").css("opacity", "1");                  
-//     }
-//     if(ws>400){
-//         $('#section1 .titlebox').css("transform","translateX(-400px)").css("opacity", "0");
-//     }
-
-//     if(ws>slider-50){
-//         $(".stickybox").fadeIn("slow");
-//     }else{
-//         $(".stickybox").fadeOut();
-//     }
-// });
-// sticky side menu scroll
 $(function(){
     $(window).scroll(function(){
         let ws=$(this).scrollTop();
         let aboutmenu= $('#aboutme').offset().top;
         let project= $('#project').offset().top;
         let contact=$('#contact').offset().top;
-
-
-        if(ws>=aboutmenu && ws < project){    
+        //>=1000  <2185
+        if(ws>=aboutmenu && ws < project-10){    
             $('.stickybox li a').removeClass('active'); 
             $('.aboutmenu').addClass('active');                 
-        }
-        else if(ws>=project && ws < contact){
+        }// >=2185   <5381
+        else if(ws>=project-10 && ws < contact-150){
             $('.stickybox li a').removeClass('active'); 
             $('.projectmenu').addClass('active');
-        }
-        else if(ws>=contact && ws < contact){
+        }// >=5381
+        else if(ws>=contact-150){
             $('.stickybox li a').removeClass('active'); 
             $('.contactmenu').addClass('active');
         }
     });
+
+    
 });
 
 
