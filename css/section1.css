@@ -10,7 +10,7 @@
 }
 
 .blackBG {
-  height: 5330px;
+  height: 6030px;
   background-color: black;
 }
 
@@ -184,8 +184,8 @@ html {
   padding-right: 160px;
 }
 
-.about__item:nth-child(odd) img {
-  margin-bottom: 64px;
+.relative {
+  position: relative;
 }
 
 .about__item:nth-child(even) {
@@ -196,8 +196,8 @@ html {
   border: 10px solid black;
   border-radius: 3%;
   overflow: hidden;
-  height: 500px;
-  width: 500px;
+  height: 450px;
+  width: 480px;
 }
 
 .imgbox:hover {
@@ -206,22 +206,22 @@ html {
 
 .about__item .content {
   height: 50%;
-  max-width: 500px;
+  max-width: 600px;
   flex: 1;
-  display: flex;
   align-items: center;
 }
-
-.about__item .content h3 {
-  font-size: 32px;
-  max-width: 250px;
-  line-height: 1.2;
+.about__item .content th, .about__item .content td {
+  text-align: left;
 }
-
+.about__item .content th {
+  padding-right: 20px;
+}
 .about__item .content p {
-  color: rgba(0, 0, 0, 0.6);
-  max-width: 350px;
-  margin-top: 8px;
+  text-align: left;
+}
+.about__item .content span {
+  color: #e485a0;
+  font-weight: bold;
 }
 
 .horizontal-scroll__section {
@@ -275,18 +275,26 @@ html {
   margin-right: 2px;
 }
 
-.content {
-  display: flex;
-  justify-content: space-around;
+.mobilebox {
+  width: 150px;
+  height: 279px;
+  position: absolute;
+  transform: translate(400px);
+  top: 40%;
 }
 
-.mobile {
-  background-image: url(../img/mobile.png);
-  width: 115px;
-  height: 230px;
-  background-size: cover;
+.mobileBG {
+  position: absolute;
+  left: 10px;
+  top: 9px;
+  width: 87%;
+  height: 100%;
   overflow: hidden;
-  img: po;
+  border-radius: 15px;
+}
+
+hr {
+  background-color: red;
 }
 
 .content i {
@@ -294,23 +302,28 @@ html {
 }
 
 #project_1:hover {
-  transform: translateY(-1000px);
+  transform: translateY(-1030px);
 }
 
 #project_2:hover {
-  transform: translateY(-685px);
+  transform: translateY(-705px);
 }
 
 #project_3:hover {
-  transform: translateY(-847px);
+  transform: translateY(-877px);
 }
 
 #project_4:hover {
-  transform: translateY(-470px);
+  transform: translateY(-500px);
 }
 
 #project_5:hover {
-  transform: translateY(-641px);
+  transform: translateY(-671px);
+}
+
+.mobileBG:hover img {
+  transform: translateY(-1643px);
+  transition: 10s;
 }
 
 .extra-section {
